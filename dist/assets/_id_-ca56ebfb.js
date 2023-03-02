@@ -1,0 +1,1 @@
+import{f as n,o as c,c as o}from"./app-089f73da.js";import{b as e}from"./route-block-83d24a4e.js";const a={};function p(r,t){return c(),o("div",null," index app ")}typeof e=="function"&&e(a);const _=n(a,[["render",p],["__file","D:/ANDROID PROJECT/panel-pengaman-apk/src/pages/dash/app/[id].vue"]]);export{_ as default};

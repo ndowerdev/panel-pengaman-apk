@@ -37,7 +37,7 @@ const ipListContextMenu = (e, index) => {
         ADD
       </button>
       <div
-        class="flex flex-col container max-w-md mt-10 mx-auto w-full items-center justify-center bg-white dark:bg-gray-800 rounded-lg shadow"
+        class="flex flex-col container  mt-10 mx-auto w-full items-center justify-center bg-white dark:bg-gray-800 rounded-lg shadow"
       >
         <ul class="flex flex-col divide-y w-full">
           <li v-for="(item, index) in formData.ip" :key="index" class="flex flex-row" @contextmenu="ipListContextMenu($event, index)">

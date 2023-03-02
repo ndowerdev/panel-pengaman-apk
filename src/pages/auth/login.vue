@@ -6,8 +6,8 @@ import { routeLocationKey, routerKey, useRoute, useRouter } from 'vue-router'
 
 import { pb, useDb } from '../../composables/database'
 // const pb = new PocketBase(import.meta.env.VITE_DB_URL)
-const username = ref('ndowernet@gmail.com')
-const password = ref('arma09121993')
+const username = ref('')
+const password = ref('')
 const router = useRouter()
 
 const doLogin = function () {

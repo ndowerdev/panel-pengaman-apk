@@ -8,9 +8,11 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     InputText: typeof import('./components/InputText.vue')['default']
+    ListBlockAsn: typeof import('./components/ListBlockAsn.vue')['default']
     ListBlockCountry: typeof import('./components/ListBlockCountry.vue')['default']
     ListBlockCountryCode: typeof import('./components/ListBlockCountryCode.vue')['default']
     ListBlockIP: typeof import('./components/ListBlockIP.vue')['default']
+    ListBlockOrg: typeof import('./components/ListBlockOrg.vue')['default']
     ModalError: typeof import('./components/ModalError.vue')['default']
     ModalNewApp: typeof import('./components/ModalNewApp.vue')['default']
     ModalProjectInput: typeof import('./components/ModalProjectInput.vue')['default']

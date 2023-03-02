@@ -7,9 +7,28 @@ const serverAppSetting = await appSetting()
 
 const formData = serverAppSetting
 
+const title = `APP Settings for: ${memberStore.memberData.activeApp.package_name} - (${memberStore.memberData.activeApp.name})`
+useHead({
+  title,
+  meta: [
+    { name: 'description', content: title },
+    {
+      name: 'theme-color',
+      content: computed(() => isDark.value ? '#00aba9' : '#ffffff'),
+    },
+  ],
+  link: [
+    {
+      rel: 'icon',
+      type: 'image/svg+xml',
+      href: computed(() => preferredDark.value ? '/favicon-dark.svg' : '/favicon.svg'),
+    },
+  ],
+})
+
 // if (checkActiveApp() === false)
 //   router.push('/dash')
-const title = `APP Settings for: ${memberStore.memberData.activeApp.package_name} - (${memberStore.memberData.activeApp.name})`
+
 const addActiveSelector = [
   {
     id: 'fan',
