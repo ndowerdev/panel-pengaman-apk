@@ -11,7 +11,7 @@ const title = `APP BlockList for: ${memberStore.memberData.activeApp.package_nam
 const router = useRouter()
 const serverAppSetting = await appBlocklist()
 
-const formData = ref(serverAppSetting)
+const formData = ref(serverAppSetting ?? {})
 
 // if (checkActiveApp() === false)
 //   router.push('/dash')
@@ -180,10 +180,11 @@ const blockContextMenu = (e) => {
   {{ formData }}
   ---
   <pre>{{ toInput }}</pre>
-  <div
-    class="w-full flex flex-row flex-wrap gap-3 text-xs mb-3"
-  >
-    <div class="w-full " @contextmenu="blockContextMenu($event)">
+  <div class="w-full flex flex-row flex-wrap gap-3 text-xs mb-3">
+    <div
+      class="w-full "
+      @contextmenu="blockContextMenu($event)"
+    >
       <TheDivider title="ADS SETTINGS" />
       <div class="flex lg:flex-row flex-col gap-3">
         <div class="w-1/4">

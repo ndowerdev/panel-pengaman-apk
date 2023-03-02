@@ -60,7 +60,7 @@ export const updateAppSetting = async (formData: any) => {
     return record
   }
   catch (error) {
-
+    console.log(error)
   }
 }
 
@@ -94,6 +94,6 @@ export const updateAppBlocklist = async (formData: any) => {
     return record
   }
   catch (error) {
-
+    console.log(error)
   }
 }
