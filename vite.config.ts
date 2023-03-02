@@ -3,7 +3,7 @@ import { defineConfig } from 'vite'
 import Preview from 'vite-plugin-vue-component-preview'
 import Vue from '@vitejs/plugin-vue'
 import Pages from 'vite-plugin-pages'
-import generateSitemap from 'vite-ssg-sitemap'
+// import generateSitemap from 'vite-ssg-sitemap'
 import Layouts from 'vite-plugin-vue-layouts'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
@@ -44,7 +44,7 @@ export default defineConfig({
 
     // https://github.com/hannoeru/vite-plugin-pages
     Pages({
-      extensions: ['vue', 'md'],
+      extensions: ['vue'],
     }),
 
     // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
@@ -83,26 +83,26 @@ export default defineConfig({
 
     // https://github.com/antfu/vite-plugin-vue-markdown
     // Don't need this? Try vitesse-lite: https://github.com/antfu/vitesse-lite
-    Markdown({
-      wrapperClasses: 'prose prose-sm m-auto text-left',
-      headEnabled: true,
-      markdownItSetup(md) {
-        // https://prismjs.com/
-        md.use(Shiki, {
-          theme: {
-            light: 'vitesse-light',
-            dark: 'vitesse-dark',
-          },
-        })
-        md.use(LinkAttributes, {
-          matcher: (link: string) => /^https?:\/\//.test(link),
-          attrs: {
-            target: '_blank',
-            rel: 'noopener',
-          },
-        })
-      },
-    }),
+    // Markdown({
+    //   wrapperClasses: 'prose prose-sm m-auto text-left',
+    //   headEnabled: true,
+    //   markdownItSetup(md) {
+    //     // https://prismjs.com/
+    //     md.use(Shiki, {
+    //       theme: {
+    //         light: 'vitesse-light',
+    //         dark: 'vitesse-dark',
+    //       },
+    //     })
+    //     md.use(LinkAttributes, {
+    //       matcher: (link: string) => /^https?:\/\//.test(link),
+    //       attrs: {
+    //         target: '_blank',
+    //         rel: 'noopener',
+    //       },
+    //     })
+    //   },
+    // }),
 
     // https://github.com/antfu/vite-plugin-pwa
     VitePWA({
@@ -134,12 +134,12 @@ export default defineConfig({
     }),
 
     // https://github.com/intlify/bundle-tools/tree/main/packages/unplugin-vue-i18n
-    VueI18n({
-      runtimeOnly: true,
-      compositionOnly: true,
-      fullInstall: true,
-      include: [path.resolve(__dirname, 'locales/**')],
-    }),
+    // VueI18n({
+    //   runtimeOnly: true,
+    //   compositionOnly: true,
+    //   fullInstall: true,
+    //   include: [path.resolve(__dirname, 'locales/**')],
+    // }),
 
     // https://github.com/antfu/vite-plugin-inspect
     // Visit http://localhost:3333/__inspect/ to see the inspector

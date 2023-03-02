@@ -7,7 +7,6 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    copy: typeof import('./components/ListBlockCountry copy.vue')['default']
     InputText: typeof import('./components/InputText.vue')['default']
     ListBlockCountry: typeof import('./components/ListBlockCountry.vue')['default']
     ListBlockCountryCode: typeof import('./components/ListBlockCountryCode.vue')['default']
